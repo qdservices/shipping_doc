@@ -1,0 +1,1139 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-37c4405c.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-ddad40d7.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e9bde216.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-816f3b5c.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#customers" class="toc-h1 toc-link" data-title="Customers">Customers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-all-customers" class="toc-h2 toc-link" data-title="List all Customers">List all Customers</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-customer" class="toc-h2 toc-link" data-title="Create a Customer">Create a Customer</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-specific-customer" class="toc-h2 toc-link" data-title="Retrieve a Specific Customer">Retrieve a Specific Customer</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-customer" class="toc-h2 toc-link" data-title="Update a Customer">Update a Customer</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#waybills" class="toc-h1 toc-link" data-title="Waybills">Waybills</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-waybill" class="toc-h2 toc-link" data-title="Create a Waybill">Create a Waybill</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-specific-waybill" class="toc-h2 toc-link" data-title="Retrieve a Specific Waybill">Retrieve a Specific Waybill</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the OmniShip Cross Border API Documentation! </p>
+
+<p>The OmniShip Cross Border API allows you to perform cross border operations on the OmniShip system.</p>
+
+<p>OmniShip Cross Border API is built using REST principles which ensures predictable URLs that makes writing applications easy. 
+This API follows HTTP rules, enabling a wide range of HTTP clients which can be used to interact with the API.</p>
+
+<p>Every resource is exposed as a URL. The URL of each resource can be obtained by accessing the API Root Endpoint <a href="https://crossborder.omniship.eu/v1/">https://crossborder.omniship.eu/api/v1/</a>.</p>
+
+<p>For example the Customers resource is reachable at <a href="https://crossborder.omniship.eu/v1/customers">https://crossborder.omniship.eu/api/v1/customers</a>.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://crossborder.omniship.eu/api/v1/&lt;resource&gt;"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv</code> with your API key.</p>
+</blockquote>
+
+<p>OMNISHIP uses API keys to allow access to the API. Contact your OMNISHIP representative to receive a new OMNISHIP API key.</p>
+
+<p>In order to authenticate properly, please put <code>Authorization: Bearer &lt;API Access Token&gt;</code> in the request header. OMNISHIP expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv</code></p>
+
+<aside class="notice">
+You must replace <code><strong>FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv</strong></code> with your personal API key.
+</aside>
+<h1 id='customers'>Customers</h1>
+<blockquote>
+<p>Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDA"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post Delivery Amsterdam"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T13:54:39+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T13:57:39+02:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<p>A customer is the owner of an uploaded shipment. The customer code is needed to identify the customer on uploading
+a new Waybill pre alert.</p>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td><span class=type>integer</span></td>
+<td>Unique ID of a customer. This is used as an identifier.</td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td><span class=type>string</span></td>
+<td>Unique code to identify a customer.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><span class=type>string</span></td>
+<td>Name of the customer</td>
+</tr>
+<tr>
+<td><code>weight_unit</code></td>
+<td><span class=type>string</span></td>
+<td>The default weight unit used for a customer on upload.</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td><span class=type>string</span></td>
+<td>Date when the customer resource was first created.</td>
+</tr>
+<tr>
+<td><code>updated_at</code></td>
+<td><span class=type>string</span></td>
+<td>Date when the customer was last updated.</td>
+</tr>
+</tbody></table>
+<h2 id='list-all-customers'>List all Customers</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://crossborder.omniship.eu/api/v1/customers"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 200 OK
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YDH"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YDH Express"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-26T18:51:14+02:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-08-04T13:38:44+02:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YAN"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yanwen (B2C Europe)"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-26T23:21:48+02:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-28T10:41:17+02:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTS"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GTS"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-26T23:32:57+02:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-26T23:32:57+02:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="s2">"..."</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="s2">"..."</span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all Customers.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb get">GET</span> <code>https://crossborder.omniship.eu/api/v1/customers</code></p>
+<h2 id='create-a-customer'>Create a Customer</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://crossborder.omniship.eu/api/v1/customers"</span>
+  <span class="nt">-X</span> POST
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "code": "ADS",
+        "name": "Amsterdam Delivery Service",
+        "weight_unit": "grams"
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 201 Created
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ADS"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amsterdam Delivery Service"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T14:03:18+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T14:03:18+02:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint creates a new Customer in OMNISHIP cross border. </p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb post">POST</span> <code>https://crossborder.omniship.eu/api/v1/waybills</code></p>
+<h3 id='arguments'>Arguments</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> The unique customer code. This code must be unique. Usually a three letter abbreviation of the customer name.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> The name of the customer.</td>
+</tr>
+<tr>
+<td>weight_unit</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> The default weight unit used for the weights in the Waybill pre-alert uploads. Valid values are <code>grams</code>, <code>kilograms</code>.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-a-specific-customer'>Retrieve a Specific Customer</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://crossborder.omniship.eu/api/v1/customers/48"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 200 OK
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDA"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post Delivery Amsterdam"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T13:54:39+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T13:57:39+02:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific Customer.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb get">GET</span> <code>https://crossborder.omniship.eu/api/v1/customers/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Customer</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-customer'>Update a Customer</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://crossborder.omniship.eu/api/v1/customers/48"</span>
+  <span class="nt">-X</span> PATCH
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "name": "Post Delivery Rotterdam"
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 200 OK
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDA"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post Delivery Rotterdam"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T13:54:39+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-30T14:25:36+02:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint updates a new Customer in OMNISHIP cross border. This is helpful if you want to change the name, or you want to change the weight unit.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb patch">PATCH</span> <code>https://crossborder.omniship.eu/api/v1/customers/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Customer to update</td>
+</tr>
+</tbody></table>
+<h3 id='arguments'>Arguments</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td><span class="type">string</span></td>
+<td>Unique code to identify a customer. Must be unique in the database.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><span class="type">string</span></td>
+<td>Name of the customer.</td>
+</tr>
+<tr>
+<td>weight_unit</td>
+<td><span class="type">string</span></td>
+<td>The default weight unit used for the weights in the pre-alert uploads. Valid values are <code>grams</code>, <code>kilograms</code>.</td>
+</tr>
+</tbody></table>
+<h1 id='waybills'>Waybills</h1>
+<blockquote>
+<p>Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"customer_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GFS"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"waybill_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"air"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"waybill_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"784-65428952"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="mi">71577</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grams"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pre_alert_rows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"order_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GSHML800Y0007SD"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"package_barcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01505272372693"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bag_grade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Z42104029016"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"shipping_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE DPD"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"weight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"551.00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"consignee_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"street"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"house_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"house_number_extension"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"additional_address_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"city_or_town"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stödtlen"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state_or_province"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"73495"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sku_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sku_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"shipping_costs"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hs_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"website"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="s2">"..."</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="s2">"..."</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<p>A waybill is a document that represents the contents of a shipment ready for transport. It details
+the exact quantity, price and delivery details of the individual packages. 
+Perform the simple operations mentioned below to create and manage your Waybill pre alert.</p>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>customer_code</code></td>
+<td><span class=type>string</span></td>
+<td>Unique ID of a customer. This is used as an identifier.</td>
+</tr>
+<tr>
+<td><code>waybill_type</code></td>
+<td><span class=type>string</span></td>
+<td>The type of waybill. Valid values are (&#39;air&#39;, &#39;road&#39;, &#39;train&#39;, &#39;sea&#39;, &#39;other&#39;).</td>
+</tr>
+<tr>
+<td><code>waybill_number</code></td>
+<td><span class=type>string</span></td>
+<td>Identifies the total shipment. If waybill type is &#39;air&#39; a validation check is done on the format of the waybill_number given.</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td><span class=type>string</span></td>
+<td>Unique identifier of the shipment. Usually an id of the original system where the pre-alert was uploaded.</td>
+</tr>
+<tr>
+<td><code>weight_unit</code></td>
+<td><span class=type>string</span></td>
+<td>Unit of weight used in the pre-alert. Valid values are (&#39;grams&#39;, &#39;kilograms&#39;)</td>
+</tr>
+<tr>
+<td><code>pre_alert_rows</code></td>
+<td><span class=type>array</span></td>
+<td>A pre alert contains multiple pre_alert rows. Each pre alert row contains <code>order_number</code>, <code>package_barcode</code>, <code>bag_grade</code>, <code>shipping_method</code>, <code>weight</code>, <code>company_name</code>, <code>consignee_name</code>, <code>phone_number</code>, <code>email_address</code>, <code>street</code>, <code>house_number</code>, <code>house_number_extension</code>, <code>additional_address_info</code>, <code>city_or_town</code>, <code>state_or_province</code>, <code>zip_code</code>, <code>country_code</code>, <code>sku_code</code>, <code>sku_description</code>, <code>quantity</code>, <code>currency</code>, <code>price</code>, <code>shipping_costs</code>, <code>hs_code</code>, <code>website</code></td>
+</tr>
+</tbody></table>
+<h2 id='create-a-waybill'>Create a Waybill</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://crossborder.omniship.eu/api/v1/waybills"</span>
+  <span class="nt">-X</span> POST
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "customer_code": "GFS",
+        "waybill_type": "air",
+        "waybill_number": "784-65428952",
+        "reference": 71577,
+        "weight_unit": "grams",
+        "pre_alert_rows": [
+            {
+                "order_number": "GSHML800Y0007SD",
+                "package_barcode": "01505272372693",
+                "bag_grade": "Z42104029016",
+                "shipping_method": "DE DPD",
+                "weight": "551.00",
+                "company_name": null,
+                "consignee_name": null,
+                "phone_number": null,
+                "email_address": null,
+                "street": null,
+                "house_number": null,
+                "house_number_extension": null,
+                "additional_address_info": null,
+                "city_or_town": "Stödtlen",
+                "state_or_province": null,
+                "zip_code": "73495",
+                "country_code": "DE",
+                "sku_code": null,
+                "sku_description": null,
+                "quantity": 0,
+                "currency": null,
+                "price": null,
+                "shipping_costs": null,
+                "hs_code": null,
+                "website": null
+            },
+            {"..."},
+            {"..."}
+        ],
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 200 Created
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3263</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"784-65428961"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="mi">71583</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total_weight"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total_bags"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pre_upload"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status_changed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T11:41:18.000000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status_changed_human"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 second ago"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"job_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uploading"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date_received"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T11:41:18.000000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T11:41:18.000000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global Freight System"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"in_container"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"container_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"airline"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">196</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"784"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CZ"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"China Southern Airlines "</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint creates a new Waybill pre alert in OMNISHIP cross border. </p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb post">POST</span> <code>https://crossborder.omniship.eu/api/v1/waybills</code></p>
+<h3 id='arguments'>Arguments</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>customer_code</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> The unique customer code. This code should reflect a customer code in the database.</td>
+</tr>
+<tr>
+<td>waybill_type</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> The type of waybill. Valid values are <code>air</code>, <code>road</code>, <code>train</code>, <code>other</code></td>
+</tr>
+<tr>
+<td>waybill_number</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> Unique number of the waybill. This number cannot already exist in the database for the same customer.</td>
+</tr>
+<tr>
+<td>reference</td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> Unique reference usually the ID of the external system where shipment is uploaded from.</td>
+</tr>
+<tr>
+<td>weight_unit</td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> The weight unit used for the weights in the pre-alert. Valid values are <code>grams</code>, <code>kilograms</code>. When omitted or empty the default customer weight unit will be used.</td>
+</tr>
+<tr>
+<td>pre_alert_rows</td>
+<td><span class="type">array</span></td>
+<td><span class="required">required</span> Line with details of the specific shipment. Each line must contain <code>order_number</code>, <code>bag_grade</code>, <code>country_code</code>.</td>
+</tr>
+</tbody></table>
+<h3 id='pre-alert-row-parameters'>Pre Alert Row Parameters</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>order_number</code></td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> Order number for the shipment line.</td>
+</tr>
+<tr>
+<td><code>package_barcode</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Barcode of the package. Usually the final mile carrier barcode.</td>
+</tr>
+<tr>
+<td><code>bag_grade</code></td>
+<td><span class="type">string</span></td>
+<td><span class="requried">required</span> Barcode of the bag/box containing the packages.</td>
+</tr>
+<tr>
+<td><code>shipping_method</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Method of shipping. Can be used as an identifier of the implementation hub.</td>
+</tr>
+<tr>
+<td><code>weight</code></td>
+<td><span class="type">number</span></td>
+<td><span class="required">required</span> Weight of the package described on the shipping line. The weight will be reflected using the weight_unit given.</td>
+</tr>
+<tr>
+<td><code>company_name</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Name of the company of the package consignee.</td>
+</tr>
+<tr>
+<td><code>consignee_name</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Name of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Phone number of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>email_address</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Email address of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>street</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Street address of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>house_number</code></td>
+<td><span class="type">number</span></td>
+<td><span class="optional">optional</span> House number of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>house_number_extension</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> House number extension of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>additional_address_info</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Additional address info i.e. <code>Apt 10</code>.</td>
+</tr>
+<tr>
+<td><code>city_or_town</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> City or town of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>state_or_province</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> State or province of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>zip_code</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Zip code of the of the package consignee.</td>
+</tr>
+<tr>
+<td><code>country_code</code></td>
+<td><span class="type">string</span></td>
+<td><span class="required">required</span> Country code of the of the package consignee. (needs to be ISO 3166 2-char code)</td>
+</tr>
+<tr>
+<td><code>sku_code</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> SKU code of the of the item(s) in the package.</td>
+</tr>
+<tr>
+<td><code>sku_description</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Description of the of the item(s) in the package.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><span class="type">number</span></td>
+<td><span class="optional">optional</span> Quantity items in the package.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> Currency of the value of the item in the package.</td>
+</tr>
+<tr>
+<td><code>price</code></td>
+<td><span class="type">number</span></td>
+<td><span class="optional">optional</span> Value of the item in the package.</td>
+</tr>
+<tr>
+<td><code>shipping_costs</code></td>
+<td><span class="type">number</span></td>
+<td><span class="optional">optional</span> Shipping costs of the package.</td>
+</tr>
+<tr>
+<td><code>hs_code</code></td>
+<td><span class="type">string</span></td>
+<td><span class="optional">optional</span> HS tariff code for customs.</td>
+</tr>
+<tr>
+<td><code>website</code></td>
+<td><span class="type">url</span></td>
+<td><span class="optional">optional</span> URL of the details page of the specified item.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-a-specific-waybill'>Retrieve a Specific Waybill</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://crossborder.omniship.eu/api/v1/waybills/3265"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 200 OK
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3265</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"air"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"784-65428963"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="mi">71585</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">16951</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total_bags"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status_changed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:39.000000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status_changed_human"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 minutes ago"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"job_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"finished"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date_received"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:33.000000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:39.000000Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global Freight System"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2758501</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"container_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"air_waybill_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3265</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Z42104029016"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">9239</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"customCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Germany"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:39.000000Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2758502</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"container_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"air_waybill_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3265</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Z42104029015"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2082</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"customCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Germany"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:39.000000Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2758503</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"container_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"air_waybill_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3265</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Z42104027049"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">5569</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"customCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Germany"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:39.000000Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2758504</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"container_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"air_waybill_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3265</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Z4210402730"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"total_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">61</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"customCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Germany"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-29T14:23:39.000000Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"in_container"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"container_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"airline"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">196</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"784"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CZ"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"China Southern Airlines "</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific Waybill.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb get">GET</span> <code>https://crossborder.omniship.eu/api/v1/waybills/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Waybill</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<p>The Cross Border API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The resource requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified resource could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The resource requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many resources.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
