@@ -4,7 +4,7 @@
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://api.omniship.eu/api/<platform>/v1/<resource>"
+curl "https://app.omniship.eu/api/<platform>/v1/<resource>"
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
 ```

@@ -7,7 +7,7 @@ If your Shipment does not have a Courier assigned to it yet, you can specify a c
 <aside class="warning">
 <div class="h3">Asynchronous response</div>
 <p>The Label & Shipping Documents will be generated asynchronously.
-If you specified a Callback URL with the Company API, or through the Easyship Dashboard, 
+If you specified a Callback URL with the Company API, or through the OMNISHIP Dashboard, 
 this URL will be called when the documents are ready.</p>
 <p>Whilst these documents are being generated, the label_state will be set to pending. 
 The possible states are not_created, pending, failed and generated.</p>
