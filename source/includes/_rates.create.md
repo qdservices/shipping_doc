@@ -1,7 +1,7 @@
 ## Request Rates
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/rates"
+curl "https://app.shipsmart.eu/api/shipping/v1/rates"
   -X POST
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
@@ -69,7 +69,7 @@ Content-Type:application/json;charset=UTF-8
 
 ### HTTP Request
 
-<span class="http-verb post">POST</span> `https://app.omniship.eu/api/shipping/v1/rates`
+<span class="http-verb post">POST</span> `https://app.shipsmart.eu/api/shipping/v1/rates`
 
 ### Arguments
 
@@ -80,7 +80,7 @@ origin_address | <span class="type">object</span> | <span class="required_if">re
 destination_address | <span class="type">object</span> | <span class="required">required</span> <span class="object">Address</span> object that should be used as receiver address.
 parcels | <span class="type">array</span> | <span class="required">required</span> Array of <span class="object">Parcel</span> objects with package details for the shipment to be sent.
 incoterms | <span class="type">string</span> | <span class="optional">optional</span> The terms of sale of the Shipment. Valid values are `DDP`, `DDU`, `DAP`.
-apply_shipping_rules | <span class="type">boolean</span> | <span class="optional">optional</span> Lets the algorithm apply the shipping rules created in the <a href="https://app.omniship.eu/settings?tab=rules" target="_blank">OMNISHIP portal</a>, for instance to exclude couriers. By default the value is `true`.
+apply_shipping_rules | <span class="type">boolean</span> | <span class="optional">optional</span> Lets the algorithm apply the shipping rules created in the <a href="https://app.shipsmart.eu/settings?tab=rules" target="_blank">ShipSmart portal</a>, for instance to exclude couriers. By default the value is `true`.
 
 ### <span class="object">Address</span> Object definitions:
 

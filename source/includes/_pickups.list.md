@@ -2,7 +2,7 @@
 
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/pickups"
+curl "https://app.shipsmart.eu/api/shipping/v1/pickups"
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
 ```
@@ -51,7 +51,7 @@ This endpoint retrieves all PickUps.
 
 ### HTTP Request
 
-<span class="http-verb get">GET</span> `https://app.omniship.eu/api/shipping/v1/shipments`
+<span class="http-verb get">GET</span> `https://app.shipsmart.eu/api/shipping/v1/shipments`
 
 Query params | Type | Description
 --------- | ------- | -----------

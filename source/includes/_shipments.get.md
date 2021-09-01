@@ -1,7 +1,7 @@
 ## Get a Shipment
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/shipments/SHIP0002184"
+curl "https://app.shipsmart.eu/api/shipping/v1/shipments/SHIP0002184"
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
 ```
@@ -132,7 +132,7 @@ This endpoint retrieves a specific Shipment.
 
 ### HTTP Request
 
-<span class="http-verb get">GET</span> `https://app.omniship.eu/api/shipping/v1/shipments/<ID>`
+<span class="http-verb get">GET</span> `https://app.shipsmart.eu/api/shipping/v1/shipments/<ID>`
 
 ### URL Parameters
 

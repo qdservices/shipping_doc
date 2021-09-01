@@ -1,7 +1,7 @@
 ## Update a Shipment
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/shipments/SHIP0002184"
+curl "https://app.shipsmart.eu/api/shipping/v1/shipments/SHIP0002184"
   -X PATCH
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
@@ -136,11 +136,11 @@ Content-Type:application/json;charset=UTF-8
 }
 ```
 
-This endpoint updates a new Shipment in OMNISHIP. A <span class="object">shipment</span> can only be updated if a label is not bought.
+This endpoint updates a new Shipment in ShipSmart. A <span class="object">shipment</span> can only be updated if a label is not bought.
 
 ### HTTP Request
 
-<span class="http-verb patch">PATCH</span> `https://app.omniship.eu/api/shipping/v1/shipments/<ID>`
+<span class="http-verb patch">PATCH</span> `https://app.shipsmart.eu/api/shipping/v1/shipments/<ID>`
 
 ### URL Parameters
 

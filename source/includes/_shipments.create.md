@@ -1,7 +1,7 @@
 ## Create a Shipment
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/shipments"
+curl "https://app.shipsmart.eu/api/shipping/v1/shipments"
   -X POST
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
@@ -156,7 +156,7 @@ Before a shipment can be confirmed and a label can be purchased, a shipment need
 
 ### HTTP Request
 
-<span class="http-verb post">POST</span> `https://app.omniship.eu/api/shipping/v1/shipments`
+<span class="http-verb post">POST</span> `https://app.shipsmart.eu/api/shipping/v1/shipments`
 
 ### Arguments
 

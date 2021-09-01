@@ -1,7 +1,7 @@
 ## Confirm and buy Labels
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/labels"
+curl "https://app.shipsmart.eu/api/shipping/v1/labels"
   -X POST
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
@@ -41,7 +41,7 @@ Content-Type:application/json;charset=UTF-8
 
 ### HTTP Request
 
-<span class="http-verb post">POST</span> `https://app.omniship.eu/api/shipping/v1/rates`
+<span class="http-verb post">POST</span> `https://app.shipsmart.eu/api/shipping/v1/rates`
 
 ### Arguments
 

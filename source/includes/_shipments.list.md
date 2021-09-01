@@ -2,7 +2,7 @@
 
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/shipments"
+curl "https://app.shipsmart.eu/api/shipping/v1/shipments"
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
 ```
@@ -139,15 +139,15 @@ Content-Type:application/json;charset=UTF-8
       "status": "ready_to_process",
       "error_message": null,
       "origin_address": {
-        "sender_id": "Omniship",
-        "company_name": "Omniship",
-        "contact_name": "Melvin Hellings",
-        "contact_email": "mhellings@omniship.eu",
-        "contact_phone": "12345",
-        "line_1": "Van Marsbergenstraat 53",
+        "sender_id": "ecorp",
+        "company_name": "E-Corp",
+        "contact_name": "Elliot Alderson",
+        "contact_email": "ealderson@ecorp.com",
+        "contact_phone": "(212) 555-0179",
+        "line_1": "Gustav Mahlerplein 53",
         "line_2": null,
-        "postal_code": "2134 LV",
-        "city": "Hoofddorp",
+        "postal_code": "1082 MA",
+        "city": "Amsterdam",
         "state": null,
         "country": "NL",
         "country_full": "Netherlands",
@@ -219,7 +219,7 @@ This endpoint retrieves all Shipments.
 
 ### HTTP Request
 
-<span class="http-verb get">GET</span> `https://app.omniship.eu/api/shipping/v1/shipments`
+<span class="http-verb get">GET</span> `https://app.shipsmart.eu/api/shipping/v1/shipments`
 
 Query params | Type | Description
 --------- | ------- | -----------

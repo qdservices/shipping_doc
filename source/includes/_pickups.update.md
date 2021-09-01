@@ -1,7 +1,7 @@
 ## Mark a PickUp as picked_up
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/pickups/PU0000001"
+curl "https://app.shipsmart.eu/api/shipping/v1/pickups/PU0000001"
   -X PATCH
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
@@ -47,11 +47,11 @@ Content-Type:application/json;charset=UTF-8
 }
 ```
 
-This endpoint manually sets the state of PickUp in OMNISHIP to picked_up.
+This endpoint manually sets the state of PickUp in ShipSmart to picked_up.
 
 ### HTTP Request
 
-<span class="http-verb patch">PATCH</span> `https://app.omniship.eu/api/shipping/v1/shipments/<ID>`
+<span class="http-verb patch">PATCH</span> `https://app.shipsmart.eu/api/shipping/v1/shipments/<ID>`
 
 ### URL Parameters
 

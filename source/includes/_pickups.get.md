@@ -1,7 +1,7 @@
 ## Get a PickUp
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/pickups/PU0000001"
+curl "https://app.shipsmart.eu/api/shipping/v1/pickups/PU0000001"
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
 ```
@@ -47,7 +47,7 @@ This endpoint retrieves a specific PickUp.
 
 ### HTTP Request
 
-<span class="http-verb get">GET</span> `https://app.omniship.eu/api/shipping/v1/pickups/<ID>`
+<span class="http-verb get">GET</span> `https://app.shipsmart.eu/api/shipping/v1/pickups/<ID>`
 
 ### URL Parameters
 

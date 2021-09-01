@@ -2,7 +2,7 @@
 
 
 ```shell
-curl "https://app.omniship.eu/api/shipping/v1/couriers"
+curl "https://app.shipsmart.eu/api/shipping/v1/couriers"
   -H "Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"
   -H "Content-Type: application/json"
 ```
@@ -51,4 +51,4 @@ Content-Type:application/json;charset=UTF-8
 
 ### HTTP Request
 
-<span class="http-verb get">GET</span> `https://app.omniship.eu/api/shipping/v1/couriers`
+<span class="http-verb get">GET</span> `https://app.shipsmart.eu/api/shipping/v1/couriers`
