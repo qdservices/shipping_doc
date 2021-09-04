@@ -59,7 +59,7 @@ pickup_id | <span class="type">string</span> | PickUp ID provided when creating 
 pickup_reference_number | <span class="type">string</span> | Reference number of the pickup
 status | <span class="type">string</span> | Search by current status of the pickup. valid options\: <code>pending</code>, <code>picked_up</code>, <code>canceled</code>
 page | <span class="type">integer</span> | Which page number want to fetch, default: <code>1</code>
-per_page | <span class="type">integer</span> | Number of Shipments per page to fetch, default: <code>25</code>, max: <code>100</code>
+per_page | <span class="type">integer</span> | Number of Pickups per page to fetch, default: <code>25</code>, max: <code>100</code>
 
 
 
