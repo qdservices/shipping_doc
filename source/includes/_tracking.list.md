@@ -69,6 +69,9 @@ Content-Type:application/json;charset=UTF-8
 ```
 
 This endpoint retrieves all Trackers.
+Shipment Tracking Statuses
+
+There are seven kinds of statuses been defined by OmniShip during the shipment transportation process, they are "Not Found", "Transit", "Out for Delivery", "Delivered", "Failed Attempt", "Exception" and "Expired". Those statuses are all judged by our system automatically according to the tracking details and are references to worldwide users.
 
 ### HTTP Request
 
