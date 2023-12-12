@@ -348,6 +348,14 @@
               </ul>
           </li>
           <li>
+            <a href="#trackings" class="toc-h1 toc-link" data-title="Trackings">Trackings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-all-trackings" class="toc-h2 toc-link" data-title="List all Trackings">List all Trackings</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#pickups" class="toc-h1 toc-link" data-title="Pickups">Pickups</a>
               <ul class="toc-list-h2">
                   <li>
@@ -661,7 +669,9 @@ If you don’t pass in a <span class="object"> Courier </span> <code> admin_name
             "width": 32,
             "height": 5,
             "weight": 0.5,
-            "quantity": 1
+            "weight_unit":"kilograms",
+            "quantity": 1,
+            "is_dg":false
           }
         ],
         "customs_items": [
@@ -671,6 +681,7 @@ If you don’t pass in a <span class="object"> Courier </span> <code> admin_name
             "value": 20,
             "currency": "EUR",
             "weight": 500,
+            "weight_unit":"grams",
             "hs_code": "123456789",
             "origin_country": "NL"
           }
@@ -733,6 +744,7 @@ Content-Type:application/json;charset=UTF-8
       </span><span class="p">{</span><span class="w">
         </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7a4a3c83-4e98-489e-a7ec-6d0861cebfd4"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"box_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom Box"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"794658261734"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
         </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
         </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
@@ -740,7 +752,8 @@ Content-Type:application/json;charset=UTF-8
         </span><span class="nl">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">
         </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"is_custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="nl">"is_custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"is_dg"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"customs_items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -774,6 +787,7 @@ Content-Type:application/json;charset=UTF-8
       </span><span class="nl">"epl2_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"zpl_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">os-saas.test</span><span class="se">\/</span><span class="s2">application</span><span class="se">\/</span><span class="s2">labels</span><span class="se">\/</span><span class="s2">da470f08-20b3-4fa8-8464-724e4b8122c1.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"docs_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">os-saas.test</span><span class="se">\/</span><span class="s2">application</span><span class="se">\/</span><span class="s2">docs</span><span class="se">\/</span><span class="s2">da470f08-20b3-4fa8-8464-724e4b8122c1.pdf"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4x6"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"resolution"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -1094,6 +1108,7 @@ Content-Type:application/json;charset=UTF-8
       </span><span class="p">{</span><span class="w">
         </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11b322a5-5242-4cd3-bd7d-3edc6d2332a0"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"box_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom Box"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
         </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
         </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
@@ -1484,6 +1499,7 @@ Content-Type:application/json;charset=UTF-8
       </span><span class="p">{</span><span class="w">
         </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11b322a5-5242-4cd3-bd7d-3edc6d2332a0"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"box_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom Box"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
         </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
         </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
@@ -1623,6 +1639,7 @@ Content-Type:application/json;charset=UTF-8
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11b322a5-5242-4cd3-bd7d-3edc6d2332a0"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"box_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom Box"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
           </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
           </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
           </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
@@ -1734,6 +1751,7 @@ Content-Type:application/json;charset=UTF-8
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c1146de9-852d-4b32-a6a3-899e21a5818c"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"box_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom Box"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
           </span><span class="nl">"length"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
           </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
           </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
@@ -1770,8 +1788,8 @@ Content-Type:application/json;charset=UTF-8
       </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nl">"tracking_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="s2">"..."</span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="s2">"..."</span><span class="p">}</span><span class="w">
+    </span><span class="p">{},</span><span class="w">
+    </span><span class="p">{}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
@@ -1833,7 +1851,7 @@ Content-Type:application/json;charset=UTF-8
 <div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 204 No Content
 Content-Type:application/json;charset=UTF-8
 </code></pre></div>
-<p>Shipments can only be deleted if there is no label bought.</p>
+<p>A shipment can be deleted through this endpoint. If the carrier allows it the shipment is also canceled in the carrier system. If the shipment is already canceled in the carrier system, the shipment is deleted in the OmniShip system</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><span class="http-verb delete">DELETE</span> <code>https://app.omniship.eu/api/shipping/v1/shipments/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
@@ -1913,6 +1931,112 @@ Content-Type:application/json;charset=UTF-8
 <td>courier</td>
 <td><span class="type">string</span></td>
 <td><span class="optional">optional</span> Courier for which the label should be retrieved.</td>
+</tr>
+</tbody></table>
+<h1 id='trackings'>Trackings</h1>
+<p>The Tracking resource is used to list tracking information of previously created Shipments.</p>
+<h2 id='list-all-trackings'>List all Trackings</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.omniship.eu/api/shipping/v1/tracking"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer FkihCtzyXWvutSRUaaEupN8hvABcDefgHI6lJKvv"</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>HTTP/1.1 200 OK
+Content-Type:application/json;charset=UTF-8
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"trackers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-03T12:41:22.000000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"shipment_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHIP0116354"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"platform_order_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHIP0116354"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"tracking_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3SKABE076200888"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"latest_event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipment delivered,2022-08-03 12:51:40"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"tracking_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">www.internationalparceltracking.com</span><span class="se">\/</span><span class="s2">Main.aspx#</span><span class="se">\/</span><span class="s2">track</span><span class="se">\/</span><span class="s2">3SKABE076200888</span><span class="se">\/</span><span class="s2">NL</span><span class="se">\/</span><span class="s2">5652 AG"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"tracking_details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"checkpoint_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-03 12:51:40"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipment delivered"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sub_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered001"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"checkpoint_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-03 10:14:41"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Driver is en route"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in transit"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sub_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transit001"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"checkpoint_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-03 10:00:26"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipment has been sorted"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in transit"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sub_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transit001"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"checkpoint_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-03 00:47:56"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipment received by PostNL"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in transit"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sub_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transit001"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"checkpoint_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-08-02 22:18:30"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"tracking_detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipment expected, but not yet arrived at PostNL"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in transit"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sub_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transit001"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{},</span><span class="w">
+    </span><span class="p">{}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all Trackers.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><span class="http-verb get">GET</span> <code>https://app.omniship.eu/api/shipping/v1/tracker</code></p>
+
+<table><thead>
+<tr>
+<th>Query params</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>shipment_id</td>
+<td><span class="type">string</span></td>
+<td>Shipment ID provided when creating the shipment. If multiple, separate with a comma.</td>
+</tr>
+<tr>
+<td>platform_order_number</td>
+<td><span class="type">string</span></td>
+<td>Order number of the sales platform</td>
+</tr>
+<tr>
+<td>created_at_from</td>
+<td><span class="type">date</span></td>
+<td>Search for trackers created since this date</td>
+</tr>
+<tr>
+<td>created_at_till</td>
+<td><span class="type">date</span></td>
+<td>Search for trackers created since this date</td>
+</tr>
+<tr>
+<td>page</td>
+<td><span class="type">integer</span></td>
+<td>Which page number want to fetch, default: <code>1</code></td>
+</tr>
+<tr>
+<td>per_page</td>
+<td><span class="type">integer</span></td>
+<td>Number of Shipments per page to fetch, default: <code>25</code>, max: <code>100</code></td>
 </tr>
 </tbody></table>
 <h1 id='pickups'>Pickups</h1>
