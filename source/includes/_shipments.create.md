@@ -27,7 +27,9 @@ curl "https://app.omniship.eu/api/shipping/v1/shipments"
             "width": 32,
             "height": 5,
             "weight": 0.5,
-            "quantity": 1
+            "weight_unit":"kilograms",
+            "quantity": 1,
+            "is_dg":false
           }
         ],
         "customs_items": [
@@ -37,6 +39,7 @@ curl "https://app.omniship.eu/api/shipping/v1/shipments"
             "value": 20,
             "currency": "EUR",
             "weight": 500,
+            "weight_unit":"grams",
             "hs_code": "123456789",
             "origin_country": "NL"
           }
@@ -103,6 +106,7 @@ Content-Type:application/json;charset=UTF-8
       {
         "id": "7a4a3c83-4e98-489e-a7ec-6d0861cebfd4",
         "box_name": "Custom Box",
+        "tracking_number": "794658261734",
         "length": 24,
         "width": 32,
         "height": 5,
@@ -110,7 +114,8 @@ Content-Type:application/json;charset=UTF-8
         "weight": 0.5,
         "weight_unit": "kg",
         "quantity": 1,
-        "is_custom": true
+        "is_custom": true,
+        "is_dg": false
       }
     ],
     "customs_items": [
@@ -144,6 +149,7 @@ Content-Type:application/json;charset=UTF-8
       "epl2_url": null,
       "zpl_url": null,
       "pdf_url": "https:\/\/os-saas.test\/application\/labels\/da470f08-20b3-4fa8-8464-724e4b8122c1.pdf",
+      "docs_url": "https:\/\/os-saas.test\/application\/docs\/da470f08-20b3-4fa8-8464-724e4b8122c1.pdf",
       "size": "4x6",
       "resolution": 200
     },
@@ -160,20 +166,20 @@ Before a shipment can be confirmed and a label can be purchased, a shipment need
 
 ### Arguments
 
-Attribute | Type | Description
---------- | ----------- | ----------
-platform_name | <span class="type">string</span> | <span class="optional">optional</span> Sales platform name. Maximum: 200 characters
-platform_order_number | <span class="type">string</span> | <span class="optional">optional</span> Order number on the sales platform.
-reference | <span class="type">string</span> | <span class="optional">optional</span> Reference information that prints on the shipping label (if courier allows it).
-sender_id | <span class="type">string</span> | <span class="optional">optional</span> ID of the sender <span class="object">Address</span> object. The origin address for the shipment is set by this ID. If the sender id is omitted the default sender address is set as origin address. 
-destination_address | <span class="type">object</span> | <span class="required">optional</span> <span class="object">Address</span> object that should be used as receiver address.
-parcels | <span class="type">array</span> | <span class="required">required</span> Array of <span class="object">Parcel</span> objects with package details for the shipment to be sent.
-customs_items | <span class="type">array</span> | <span class="required">required</span> Array of <span class="object">Customs Item</span> objects with details of the products in the shipment for customs.
-incoterms | <span class="type">string</span> | <span class="optional">optional</span> The terms of sale of the Shipment. Valid values are `DDP`, `DDU`, `DAP`.
-courier | <span class="type">string</span> | <span class="optional">optional</span> Select a specific couriers <code>admin_name</code> to create the shipment with. Use the <a href="#couriers">Couriers API</a> resource to retrieve a list of available couriers and their admin names.
-exclude_rates | <span class="type">boolean</span> | <span class="optional">optional</span> When `true` rates will not be calculated for the shipment, which will lead to a faster response. Value is `false` by default.
-buy_label | <span class="type">boolean</span> | <span class="optional">optional</span> When `true` a shipment is created and the label is bought in a single API call instead of two. Value is `false` by default.
-buy_label_synchronous | <span class="type">boolean</span> | <span class="optional">optional</span> When `true` a label is generated synchronously and returned directly in the response. Value is `false` by default.
+| Attribute             | Type                              | Description                                                                                                                                                                                                                                  |
+|-----------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| platform_name         | <span class="type">string</span>  | <span class="optional">optional</span> Sales platform name. Maximum: 200 characters                                                                                                                                                          |
+| platform_order_number | <span class="type">string</span>  | <span class="optional">optional</span> Order number on the sales platform.                                                                                                                                                                   |
+| reference             | <span class="type">string</span>  | <span class="optional">optional</span> Reference information that prints on the shipping label (if courier allows it).                                                                                                                       |
+| sender_id             | <span class="type">string</span>  | <span class="optional">optional</span> ID of the sender <span class="object">Address</span> object. The origin address for the shipment is set by this ID. If the sender id is omitted the default sender address is set as origin address.  |
+| destination_address   | <span class="type">object</span>  | <span class="required">optional</span> <span class="object">Address</span> object that should be used as receiver address.                                                                                                                   |
+| parcels               | <span class="type">array</span>   | <span class="required">required</span> Array of <span class="object">Parcel</span> objects with package details for the shipment to be sent.                                                                                                 |
+| customs_items         | <span class="type">array</span>   | <span class="required">required</span> Array of <span class="object">Customs Item</span> objects with details of the products in the shipment for customs.                                                                                   |
+| incoterms             | <span class="type">string</span>  | <span class="optional">optional</span> The terms of sale of the Shipment. Valid values are `DDP`, `DDU`, `DAP`.                                                                                                                              |
+| courier               | <span class="type">string</span>  | <span class="optional">optional</span> Select a specific couriers <code>admin_name</code> to create the shipment with. Use the <a href="#couriers">Couriers API</a> resource to retrieve a list of available couriers and their admin names. |
+| exclude_rates         | <span class="type">boolean</span> | <span class="optional">optional</span> When `true` rates will not be calculated for the shipment, which will lead to a faster response. Value is `false` by default.                                                                         |
+| buy_label             | <span class="type">boolean</span> | <span class="optional">optional</span> When `true` a shipment is created and the label is bought in a single API call instead of two. Value is `false` by default.                                                                           |
+| buy_label_synchronous | <span class="type">boolean</span> | <span class="optional">optional</span> When `true` a label is generated synchronously and returned directly in the response. Value is `false` by default.                                                                                    |
 
 ### Address Object definitions:
 

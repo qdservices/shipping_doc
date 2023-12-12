@@ -21,6 +21,8 @@ includes:
   - shipments.delete
   - labels
   - labels.create
+  - tracking
+  - tracking.list
   - pickups
   - pickups.create
   - pickups.update

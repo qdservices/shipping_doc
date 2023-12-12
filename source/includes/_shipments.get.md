@@ -60,6 +60,7 @@ Content-Type:application/json;charset=UTF-8
       {
         "id": "11b322a5-5242-4cd3-bd7d-3edc6d2332a0",
         "box_name": "Custom Box",
+        "tracking_number": null,
         "length": 24,
         "width": 32,
         "height": 5,
@@ -136,6 +137,6 @@ This endpoint retrieves a specific Shipment.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The Shipment ID of the Shipment
+| Parameter | Description                     |
+|-----------|---------------------------------|
+| ID        | The Shipment ID of the Shipment |

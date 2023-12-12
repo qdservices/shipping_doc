@@ -68,6 +68,7 @@ Content-Type:application/json;charset=UTF-8
       {
         "id": "11b322a5-5242-4cd3-bd7d-3edc6d2332a0",
         "box_name": "Custom Box",
+        "tracking_number": null,
         "length": 24,
         "width": 32,
         "height": 5,
@@ -144,24 +145,24 @@ This endpoint updates a new Shipment in OMNISHIP. A <span class="object">shipmen
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The Shipment ID of the <span class="object">Shipment</span> to update
+| Parameter | Description                                                           |
+|-----------|-----------------------------------------------------------------------|
+| ID        | The Shipment ID of the <span class="object">Shipment</span> to update |
 
 ### Arguments
 
-Attribute | Type | Description
---------- | ----------- | ----------
-platform_name | <span class="type">string</span> | Sales platform name. Maximum: 200 characters
-platform_order_number | <span class="type">string</span> | Order number on the sales platform.
-reference | <span class="type">string</span> | Reference information that prints on the shipping label (if courier allows it).
-sender_id | <span class="type">string</span> | ID of the sender <span class="object">Address</span> object. The origin address for the shipment is set by this ID. If the sender id is omitted the default sender address is set as origin address.
-destination_address | <span class="type">object</span> | <span class="object">Address</span> object that should be used as receiver address.
-parcels | <span class="type">array</span> | Array of <span class="object">Parcel</span> objects with package details for the shipment to be sent.
-customs_items | <span class="type">array</span> | Array of <span class="object">Customs Item</span> objects with details of the products in the shipment for customs.
-incoterms | <span class="type">string</span> | The terms of sale of the Shipment. Valid values are `DDP`, `DDU`, `DAP`.
-courier | <span class="type">string</span> | Select a specific courier to create the shipment with.
-exclude_rates | <span class="type">boolean</span> | When `true` rates will not be calculated for the shipment, which will lead to a faster response. Value is `false` by default.
+| Attribute             | Type                              | Description                                                                                                                                                                                          |
+|-----------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| platform_name         | <span class="type">string</span>  | Sales platform name. Maximum: 200 characters                                                                                                                                                         |
+| platform_order_number | <span class="type">string</span>  | Order number on the sales platform.                                                                                                                                                                  |
+| reference             | <span class="type">string</span>  | Reference information that prints on the shipping label (if courier allows it).                                                                                                                      |
+| sender_id             | <span class="type">string</span>  | ID of the sender <span class="object">Address</span> object. The origin address for the shipment is set by this ID. If the sender id is omitted the default sender address is set as origin address. |
+| destination_address   | <span class="type">object</span>  | <span class="object">Address</span> object that should be used as receiver address.                                                                                                                  |
+| parcels               | <span class="type">array</span>   | Array of <span class="object">Parcel</span> objects with package details for the shipment to be sent.                                                                                                |
+| customs_items         | <span class="type">array</span>   | Array of <span class="object">Customs Item</span> objects with details of the products in the shipment for customs.                                                                                  |
+| incoterms             | <span class="type">string</span>  | The terms of sale of the Shipment. Valid values are `DDP`, `DDU`, `DAP`.                                                                                                                             |
+| courier               | <span class="type">string</span>  | Select a specific courier to create the shipment with.                                                                                                                                               |
+| exclude_rates         | <span class="type">boolean</span> | When `true` rates will not be calculated for the shipment, which will lead to a faster response. Value is `false` by default.                                                                        |
 
 ### Address Object definitions:
 

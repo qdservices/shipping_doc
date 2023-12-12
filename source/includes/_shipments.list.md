@@ -62,6 +62,7 @@ Content-Type:application/json;charset=UTF-8
         {
           "id": "11b322a5-5242-4cd3-bd7d-3edc6d2332a0",
           "box_name": "Custom Box",
+          "tracking_number": null,
           "length": 24,
           "width": 32,
           "height": 5,
@@ -173,6 +174,7 @@ Content-Type:application/json;charset=UTF-8
         {
           "id": "c1146de9-852d-4b32-a6a3-899e21a5818c",
           "box_name": "Custom Box",
+          "tracking_number": null,
           "length": 24,
           "width": 32,
           "height": 5,
@@ -209,8 +211,8 @@ Content-Type:application/json;charset=UTF-8
       "label": null,
       "tracking_code": null
     },
-    {"..."},
-    {"..."}
+    {},
+    {}
 	]
 }
 ```
@@ -221,12 +223,12 @@ This endpoint retrieves all Shipments.
 
 <span class="http-verb get">GET</span> `https://app.omniship.eu/api/shipping/v1/shipments`
 
-Query params | Type | Description
---------- | ------- | -----------
-shipment_id | <span class="type">string</span> | Shipment ID provided when creating the shipment. If multiple, separate with a comma.
-platform_order_number | <span class="type">string</span> | Order number of the sales platform
-created_at_from | <span class="type">date</span> | Search for shipments created since this date
-created_at_till | <span class="type">date</span> | Search for shipments created since this date
-label_state | <span class="type">string</span> | Search by current label status of shipment. valid options\: <code>ready_to_process</code>, <code>processing</code>, <code>label_generated</code>, <code>error</code>
-page | <span class="type">integer</span> | Which page number want to fetch, default: <code>1</code>
-per_page | <span class="type">integer</span> | Number of Shipments per page to fetch, default: <code>25</code>, max: <code>100</code>
+| Query params          | Type                              | Description                                                                                                                                                          |
+|-----------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| shipment_id           | <span class="type">string</span>  | Shipment ID provided when creating the shipment. If multiple, separate with a comma.                                                                                 |
+| platform_order_number | <span class="type">string</span>  | Order number of the sales platform                                                                                                                                   |
+| created_at_from       | <span class="type">date</span>    | Search for shipments created since this date                                                                                                                         |
+| created_at_till       | <span class="type">date</span>    | Search for shipments created since this date                                                                                                                         |
+| label_state           | <span class="type">string</span>  | Search by current label status of shipment. valid options\: <code>ready_to_process</code>, <code>processing</code>, <code>label_generated</code>, <code>error</code> |
+| page                  | <span class="type">integer</span> | Which page number want to fetch, default: <code>1</code>                                                                                                             |
+| per_page              | <span class="type">integer</span> | Number of Shipments per page to fetch, default: <code>25</code>, max: <code>100</code>                                                                               |

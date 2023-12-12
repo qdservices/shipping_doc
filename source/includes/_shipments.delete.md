@@ -14,7 +14,7 @@ HTTP/1.1 204 No Content
 Content-Type:application/json;charset=UTF-8
 ```
 
-Shipments can only be deleted if there is no label bought.
+A shipment can be deleted through this endpoint. If the carrier allows it the shipment is also canceled in the carrier system. If the shipment is already canceled in the carrier system, the shipment is deleted in the OmniShip system
 
 ### HTTP Request
 
@@ -22,6 +22,6 @@ Shipments can only be deleted if there is no label bought.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The Shipment ID of the <span class="object">Shipment</span> to delete
+| Parameter | Description                                                           |
+|-----------|-----------------------------------------------------------------------|
+| ID        | The Shipment ID of the <span class="object">Shipment</span> to delete |
