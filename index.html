@@ -1997,7 +1997,10 @@ Content-Type:application/json;charset=UTF-8
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all Trackers.</p>
+<p>This endpoint retrieves all Trackers.
+Shipment Tracking Statuses</p>
+
+<p>There are seven kinds of statuses been defined by OmniShip during the shipment transportation process, they are &quot;Not Found&quot;, &quot;Transit&quot;, &quot;Out for Delivery&quot;, &quot;Delivered&quot;, &quot;Failed Attempt&quot;, &quot;Exception&quot; and &quot;Expired&quot;. Those statuses are all judged by our system automatically according to the tracking details and are references to worldwide users.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><span class="http-verb get">GET</span> <code>https://app.omniship.eu/api/shipping/v1/tracker</code></p>
 
